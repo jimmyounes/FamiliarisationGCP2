@@ -24,5 +24,5 @@ jobs:
            GOOGLE_PROJECT: ${{ secrets.GOOGLE_PROJECT }}
           run: |
            gcloud auth configure-docker europe-west1-docker.pkg.dev
-           docker build -t europe-west1-docker.pkg.dev//$GOOGLE_PROJECT/test-younes-images/nginx:latest
+           docker build -t europe-west1-docker.pkg.dev/$GOOGLE_PROJECT/test-younes-images/nginx:latest .
            docker push europe-west1-docker.pkg.dev/$GOOGLE_PROJECT/test-younes-images/nginx:latest
